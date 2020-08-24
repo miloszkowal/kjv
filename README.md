@@ -38,7 +38,7 @@ Forked from [https://github.com/bontibon/kjv.git](https://github.com/bontibon/kj
 
 kjv can be built by cloning the repository and then running make:
 
-    git clone https://github.com/lukesmithxyz/kjv.git
+    git clone https://github.com/miloszkowal/kjv.git
     cd kjv
     sudo make install
 
