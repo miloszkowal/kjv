@@ -64,6 +64,10 @@ while [ $# -gt 0 ]; do
 	elif [ "$1" = "-W" ]; then
 		export KJV_NOLINEWRAP=1
 		shift
+	elif [ "$1" = "-r" ]; then
+		echo "Random"
+		get_data kjv.tsv | awk -v cmd=rand
+		exit
 	elif [ "$1" = "-h" ] || [ "$isFlag" -eq 1 ]; then
 		show_help
 	else
