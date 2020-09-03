@@ -23,6 +23,7 @@ show_help() {
 	echo "  -l      list books"
 	echo "  -W      no line wrap"
 	echo "  -h      show help"
+	echo "  -r      random verse"
 	echo
 	echo "  Reference types:"
 	echo "      <Book>"
@@ -65,8 +66,8 @@ while [ $# -gt 0 ]; do
 		export KJV_NOLINEWRAP=1
 		shift
 	elif [ "$1" = "-r" ]; then
-		echo "Random"
-		get_data kjv.tsv | awk -v cmd=rand
+		# echo "Random"
+		awk 'BEGIN{ srand() } rand() * NR < 1 { line = $0 } END { print line }' kjv.tsv
 		exit
 	elif [ "$1" = "-h" ] || [ "$isFlag" -eq 1 ]; then
 		show_help

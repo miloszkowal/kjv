@@ -150,7 +150,7 @@ function bookmatches(book, bookabbr, query) {
 	}
 }
 
-function printverse(verse,    word_count, characters_printed) {
+function printverse(verse, word_count, characters_printed) {
 	if (ENVIRON["KJV_NOLINEWRAP"] != "" && ENVIRON["KJV_NOLINEWRAP"] != "0") {
 		printf("%s\n", verse)
 		return
