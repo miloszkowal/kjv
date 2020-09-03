@@ -67,7 +67,7 @@ while [ $# -gt 0 ]; do
 		shift
 	elif [ "$1" = "-r" ]; then
 		# echo "Random"
-		awk 'BEGIN{ srand() } rand() * NR < 1 { line = $0 } END { print line }' kjv.tsv
+		get_data kjv.tsv | awk 'BEGIN{ srand() } rand() * NR < 1 { line = $0 } END { print line }'
 		exit
 	elif [ "$1" = "-h" ] || [ "$isFlag" -eq 1 ]; then
 		show_help
