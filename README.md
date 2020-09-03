@@ -12,6 +12,7 @@ Forked from [https://github.com/bontibon/kjv.git](https://github.com/bontibon/kj
       -l      list books
       -W      no line wrap
       -h      show help
+      -r      get random verse	
 
       Reference types:
           <Book>
